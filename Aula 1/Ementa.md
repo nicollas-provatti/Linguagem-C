@@ -1,5 +1,11 @@
 # Curso de Linguagem C - Ementa
 
+## Cronograma
+**Feriados:** 12/06 e 19/06
+**Última Aula:** 20/06
+**Avaliação:** 24/06
+**Projeto:** 01/07 e 03/07
+
 ## Aula 1 – Introdução
 - História da linguagem C
 - Características da linguagem
