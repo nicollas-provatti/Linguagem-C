@@ -51,7 +51,7 @@
  
 * Saída:
     ```yaml
-    Quantidade de números positivos: 3
+    Quantidade de números positivos: 2
     Quantidade de números negativos: 2
     ```
 
