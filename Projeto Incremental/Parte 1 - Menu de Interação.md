@@ -10,13 +10,13 @@ Criar um **menu interativo** que será a base do sistema bancário. O menu deve 
 ## 📝 Passo a Passo:
 
 #### 1️⃣ Criar o esqueleto do programa
-Abra o seu editor de código C e comece criando a estrutura básica de um programa:
+Abra o VSCode e comece criando a estrutura básica de um programa:
 
 ```c
 #include <stdio.h>
 
 int main() {
-    // código aqui
+    // Código aqui
     return 0;
 }
 ```
@@ -24,7 +24,7 @@ int main() {
 <br>
 
 #### 2️⃣ Declarar a variável de controle do menu
-Dentro da função `main`, crie uma variável inteira chamada opcao, que será usada para guardar a `opção` escolhida pelo usuário.
+Dentro da função `main`, crie uma variável inteira chamada `opcao`, que será usada para guardar a opção escolhida pelo usuário.
 
 <br>
 
@@ -52,7 +52,7 @@ Escolha uma opção:
 <br>
 
 #### 5️⃣ Usar a estrutura de decisão `switch`
-Após ler a opção do usuário, use o comando `switch` para verificar o valor digitado e exibir uma mensagem correspondente. As mensagens são:
+Após ler a opção do usuário, use o comando `switch` para verificar o valor digitado e exibir uma mensagem correspondente. As mensagem são:
 
 ```
 Opção 0: Saindo do sistema...
@@ -68,5 +68,10 @@ Outros opções: Opção inválida. Tente novamente.
 
 #### 6️⃣ Testar o programa
 Execute seu programa e teste digitando as opções do menu (1 a 5 e 0) e também um número inválido (como 9 ou -1) para garantir que a mensagem "Opção inválida" apareça.
+
+---
+
+### ✅ Resultado Esperado:
+O programa exibe um menu e responde à escolha do usuário com mensagens, repetindo até que a opção **0 - Sair** seja escolhida.
 
 ---
