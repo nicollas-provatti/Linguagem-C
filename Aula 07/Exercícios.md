@@ -119,7 +119,41 @@
 
 ---
 
-### 🔹 Exercício 5 - Mais Frequente
+### 🔹 Exercício 5 - Buscar Elemento
+**Descrição:** Crie um programa com uma função chamada `buscar()` que receba um array de inteiros, seu tamanho e um valor a ser buscado. A função deve retornar a posição onde o valor foi encontrado, ou `-1` caso o valor não exista no array.
+
+**Exemplo de:**
+- Entrada:
+    ```yaml
+    Digite 10 números:
+    12 7 9 21 5 30 18 4 2 17
+
+    Digite o número que deseja buscar:
+    30
+    ```
+ 
+* Saída:
+    ```yaml
+    Número encontrado na posição: 5
+    ```
+
+- Entrada:
+    ```yaml
+    Digite 10 números:
+    10 20 30 40 50 60 70 80 90 100
+
+    Digite o número que deseja buscar:
+    25
+    ```
+ 
+* Saída:
+    ```yaml
+    Número não encontrado no vetor.
+    ```
+
+---
+
+### 🔹 Exercício 6 - Mais Frequente
 **Descrição:** Crie um programa em C que contenha uma função que recebe um array com 10 elementos e retona o elemento que mais se repete no array.
 
 **Exemplo de:**
