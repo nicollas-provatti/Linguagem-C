@@ -128,30 +128,5 @@ Outro exemplo:
     ```css
     O número 10 não foi encontrado
     ```
-
----
-
-### 🔹 Exercício 5 - Mais Frequente
-**Descrição:** Crie um programa em C que contenha uma função que recebe uma matriz 3x3 com 9 elementos e retona o elemento que mais se repete na matriz. 
-
-**Exemplo de:**
-- Entrada:
-    ```yaml
-    Digite o valor da posição [0][0]: 5  
-    Digite o valor da posição [0][1]: 2  
-    Digite o valor da posição [0][2]: 3  
-    Digite o valor da posição [1][0]: 5  
-    Digite o valor da posição [1][1]: 5  
-    Digite o valor da posição [1][2]: 1  
-    Digite o valor da posição [2][0]: 2  
-    Digite o valor da posição [2][1]: 3  
-    Digite o valor da posição [2][2]: 3
-    ```
- 
-* Saída:
-    ```yaml
-    O número que mais se repete na matriz é: 5
-    ```
     
 ---
-
