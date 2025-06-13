@@ -14,12 +14,12 @@ typedef struct {
     float saldo;      
 } Conta;
 
-// Funções Utilitárias
+// FunÃ§Ãµes UtilitÃ¡rias
 int mostrarMenu();
 int contaExiste(Conta contas[], int numero);
 void carregando();
 
-// Funções do Sistema
+// FunÃ§Ãµes do Sistema
 void criarConta(Conta contas[]);
 void exibirContas(Conta contas[]);
 void depositar(Conta contas[]);
@@ -72,7 +72,7 @@ int main() {
             editarConta(contas);
             break;
         default:
-            printf("Opção inválida. Tente novamente.");
+            printf("OpÃ§Ã£o invÃ¡lida. Tente novamente.");
         }
         Sleep(3000);
         system("cls");
@@ -82,22 +82,22 @@ int main() {
     return 0;
 }
 
-// Funções Utilitárias
+// FunÃ§Ãµes UtilitÃ¡rias
 int mostrarMenu() {
     int opcao;
-    printf("\n===== SISTEMA BANCÁRIO =====\n");
+    printf("\n===== SISTEMA BANCÃRIO =====\n");
     printf("1 - Criar Conta\n");
     printf("2 - Exibir Contas\n");
     printf("3 - Depositar\n");
     printf("4 - Sacar\n");
     printf("5 - Buscar Conta\n");
-    printf("6 - Transferir");
-    printf("7 - Deltar Conta");
+    printf("6 - Transferir\n");
+    printf("7 - Deletar Conta\n");
     printf("8 - Editar Conta\n");
     printf("0 - Sair\n");
     printf("============================\n\n");
     
-    printf("Escolha uma opção: ");
+    printf("Escolha uma opÃ§Ã£o: ");
     scanf("%d", &opcao);
     return opcao;
 }
@@ -125,7 +125,7 @@ void carregando() {
     Sleep(1000);
 }
 
-// Funções do Sistema
+// FunÃ§Ãµes do Sistema
 void criarConta(Conta contas[]) {
     if (totalContas >= MAX_CONTAS) {
         printf("O sistema atingiu o limite de contas!");
@@ -139,10 +139,10 @@ void criarConta(Conta contas[]) {
     contas[i].numero = ids;
     contas[i].saldo = 0.0;
 
-    printf("Olá, %s! Sua conta foi criada com sucesso!\n", contas[i].nome);
+    printf("OlÃ¡, %s! Sua conta foi criada com sucesso!\n", contas[i].nome);
 
     printf("--- DADOS ---\n");
-    printf("Número: %d\n", contas[i].numero);
+    printf("NÃºmero: %d\n", contas[i].numero);
     printf("Nome: %s\n", contas[i].nome);
     printf("Saldo: R$ %.2f\n", contas[i].saldo);
 
@@ -158,15 +158,15 @@ void exibirContas(Conta contas[]) {
 
     for (int i = 0; i < totalContas; i++) {
         printf("\n--- CONTA %d ---\n", i + 1);
-        printf("Número: %d\n", contas[i].numero);
+        printf("NÃºmero: %d\n", contas[i].numero);
         printf("Nome: %s\n", contas[i].nome);
         printf("Saldo: R$ %.2f\n\n", contas[i].saldo);
     }
 }
 
-void depostiar(Conta contas[]) {
+void depositar(Conta contas[]) {
     int numero;
-    printf("\nDigite o número da conta: ");
+    printf("\nDigite o nÃºmero da conta: ");
     scanf("%d", &numero);
 
     int i = contaExiste(contas, numero);
@@ -174,22 +174,22 @@ void depostiar(Conta contas[]) {
     carregando();
 
     if (i == -1) {
-        printf("Conta não encontrada.\n");
+        printf("Conta nÃ£o encontrada.\n");
         return;
     }
     if (i >= 0) {
         float valorDeposito;
-        printf("\nInforme o valor dopósito: ");
+        printf("\nInforme o valor dopÃ³sito: ");
         scanf("%f", &valorDeposito);
 
         if (valorDeposito <= 0) {
-            printf("Valor Inválida.\n");
+            printf("Valor InvÃ¡lida.\n");
         }
         else {
             contas[i].saldo += valorDeposito;
 
             printf("\n--- DADOS ATUALIADOS ---\n");
-            printf("Número: %d\n", contas[i].numero);
+            printf("NÃºmero: %d\n", contas[i].numero);
             printf("Nome: %s\n", contas[i].nome);
             printf("Saldo: R$ %.2f\n\n", contas[i].saldo);
         }
@@ -207,7 +207,7 @@ void sacar(Conta contas[]) {
     carregando();
 
     if (i == - 1) {
-        printf("Conta não encontrada.\n");
+        printf("Conta nÃ£o encontrada.\n");
         return;
     }
     if (i >= 0) {
@@ -216,7 +216,7 @@ void sacar(Conta contas[]) {
         scanf("%f", &valorSaque);
 
         if (valorSaque <= 0) {
-            printf("Valor de saque inváido.\n");
+            printf("Valor de saque invÃ¡ido.\n");
         }
         else {
             if (valorSaque > contas[i].saldo) {
@@ -226,7 +226,7 @@ void sacar(Conta contas[]) {
                 contas[i].saldo -= valorSaque;
 
                 printf("\n--- DADOS ATUALIZADOS ---\n");
-                printf("Número: %d\n", contas[i].numero);
+                printf("NÃºmero: %d\n", contas[i].numero);
                 printf("Nome: %s\n", contas[i].nome);
                 printf("Saldo: R$ %.2f\n\n", contas[i].saldo);
             }
@@ -245,12 +245,12 @@ void buscarConta(Conta contas[]) {
     carregando();
 
     if (i == - 1) {
-        printf("Conta não encontrada.\n");
+        printf("Conta nÃ£o encontrada.\n");
         return;
     }
     if (i >= 0) {
         printf("\n--- DADOS ---\n");
-        printf("Número: %d\n", contas[i].numero);
+        printf("NÃºmero: %d\n", contas[i].numero);
         printf("Nome: %s\n", contas[i].nome);
         printf("Saldo: R$ %.2f\n\n", contas[i].saldo);
     }
@@ -258,11 +258,11 @@ void buscarConta(Conta contas[]) {
 
 void transferir(Conta contas[]) {
     int numeroOrigem;
-    printf("\nInforme o número da conta de origem: ");
+    printf("\nInforme o nÃºmero da conta de origem: ");
     scanf("%d", &numeroOrigem);
 
     int numeroDestino;
-    printf("\nInforme o número da conta de destino: ");
+    printf("\nInforme o nÃºmero da conta de destino: ");
     scanf("%d", &numeroDestino);
 
     int indiceOrigem = contaExiste(contas, numeroOrigem);
@@ -272,24 +272,24 @@ void transferir(Conta contas[]) {
     carregando();
 
     if (indiceOrigem == -1 && indiceDestino == -1) {
-        printf("Contas não encontradas.\n");
+        printf("Contas nÃ£o encontradas.\n");
         return;
     }
     if (indiceOrigem == -1) {
-        printf("Conta de origem não encontrada.\n");
+        printf("Conta de origem nÃ£o encontrada.\n");
         return;
     }
     if (indiceDestino == -1) {
-        printf("Conta de destino não encontrada.\n");
+        printf("Conta de destino nÃ£o encontrada.\n");
         return;
     }
     if (indiceOrigem >= 0 && indiceDestino >= 0) {
         float valorTranferencia;
-        printf("\nInforme o valor da transferência: ");
+        printf("\nInforme o valor da transferÃªncia: ");
         scanf("%f", &valorTranferencia);
 
         if (valorTranferencia <= 0) {
-            print("Valor inválido.\n");
+            printf("Valor invÃ¡lido.\n");
         }
         else {
             if (valorTranferencia > contas[indiceOrigem].saldo) {
@@ -300,12 +300,12 @@ void transferir(Conta contas[]) {
                 contas[indiceDestino].saldo += valorTranferencia;
 
                 printf("\n--- DADOS DA CONTA ORIGEM ---\n");
-                printf("Número: %d\n", contas[indiceOrigem].numero);
+                printf("NÃºmero: %d\n", contas[indiceOrigem].numero);
                 printf("Nome: %s\n", contas[indiceOrigem].nome);
                 printf("Saldo: R$ %.2f\n\n", contas[indiceOrigem].saldo);
 
                 printf("\n--- DADOS DA CONTA DESTINO ---\n");
-                printf("Número: %d\n", contas[indiceDestino].numero);
+                printf("NÃºmero: %d\n", contas[indiceDestino].numero);
                 printf("Nome: %s\n", contas[indiceDestino].nome);
                 printf("Saldo: R$ %.2f\n\n", contas[indiceDestino].saldo);
             }
@@ -315,13 +315,13 @@ void transferir(Conta contas[]) {
 
 void deletarConta(Conta contas[]) {
     int numero;
-    printf("\nInforme o número da conta de origem: ");
+    printf("\nInforme o nÃºmero da conta de origem: ");
     scanf("%d", &numero);
 
     int indice = contaExiste(contas, numero);
 
     if (indice == -1) {
-        printf("Conta não encontrada.\n");
+        printf("Conta nÃ£o encontrada.\n");
         return;
     }
     if (indice >= 0) {
@@ -343,7 +343,7 @@ void deletarConta(Conta contas[]) {
 
 void editarConta(Conta contas[]) {
     int numero;
-    printf("Informe o número da conta: ");
+    printf("Informe o nÃºmero da conta: ");
     scanf("%d", &numero);
 
     int indice = contaExiste(contas, numero);
@@ -352,7 +352,7 @@ void editarConta(Conta contas[]) {
     carregando();
 
     if (indice == -1) {
-        printf("\nConta não encontrada!");
+        printf("\nConta nÃ£o encontrada!");
         return;
     }
     if (indice >= 0) {
@@ -365,9 +365,8 @@ void editarConta(Conta contas[]) {
         contas[indice].nome[strcspn(contas[indice].nome, "\n")] = '\0';
         
         printf("\n\n--- DADOS ATUALIZADOS ---\n");
-        printf("Número: %d\n", contas[indice].numero);
+        printf("NÃºmero: %d\n", contas[indice].numero);
         printf("Nome: %s\n", contas[indice].nome);
         printf("Saldo: R$ %.2f", contas[indice].saldo);
     }
 }
-
