@@ -1,4 +1,4 @@
-# 📘 Aula 11 - Ponteiro
+# 📘 Aula 12 - Ponteiro
 
 ### 🔵 O que são ponteiros ?
 Ponteiros são variáveis que armazenam o **endereço de memória** de outras variáveis. Eles são fundamentais para manipulação eficiente de dados, passagem por referência, alocação dinâmica e estruturação de dados mais complexos.
