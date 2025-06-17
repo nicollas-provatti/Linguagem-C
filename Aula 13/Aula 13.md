@@ -1,4 +1,4 @@
-# 📘 Aula 12 - Manipulação de Arquivos
+# 📘 Aula 13 - Manipulação de Arquivos
 
 ### 🔵 Introdução à Manipulação de Arquivos
 Em programas mais complexos, muitas vezes é necessário armazenar dados de forma permanente, mesmo após o encerramento do programa. Para isso, utilizamos **arquivos**, que permitem **salvar, ler e manipular informações no disco** rígido. Ao contrário de variáveis em memória, os dados armazenados em arquivos persistem entre execuções do programa.
