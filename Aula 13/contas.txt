@@ -1,0 +1,5 @@
+1001,Ana Souza,1500,00
+1002,Carlos Lima,320,00
+1003,Beatriz Melo,0,00
+1004,João Silva,890,00
+1005,Larissa Costa,230,00
