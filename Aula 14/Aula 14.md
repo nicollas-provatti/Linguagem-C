@@ -1,4 +1,4 @@
-# 📘 Aula 13 - Alocação Dinâmica
+# 📘 Aula 14 - Alocação Dinâmica
 
 ### 🔵 O que é alocação dinâmica ?
 A **alocação dinâmica de memória** é o processo de reservar espaço na memória **durante a execução do programa**, em vez de definir antecipadamente (em tempo de compilação) o quanto será utilizado. Isso oferece **flexibilidade** para trabalhar com quantidades variáveis de dados e permite que programas se adaptem a diferentes cenários de uso.
